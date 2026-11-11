@@ -1,0 +1,1 @@
+Coloca aquí el video principal optimizado y nómbralo hero.mp4. Para autoplay debe estar silenciado y usar formato MP4 H.264.
