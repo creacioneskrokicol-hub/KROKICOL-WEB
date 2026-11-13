@@ -444,8 +444,8 @@ main > section:not(.hero) {
   display: none !important;
 }
 
-/* Ocultar redes sociales y footer */
+/* Mostrar redes sociales y footer */
 .social-section,
 .site-footer {
-  display: none !important;
+    display: block;
 }
