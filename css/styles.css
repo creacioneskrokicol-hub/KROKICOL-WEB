@@ -439,9 +439,11 @@
 
 /* MODO TEMPORAL DE RENOVACIÓN */
 
+
+
 /* Ocultar las demás secciones */
 main > section:not(.hero) {
-  display: none !important;
+    display: none !important;
 }
 
 /* Mostrar redes sociales y footer */
