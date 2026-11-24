@@ -18,7 +18,7 @@
 <meta property="og:description" content="KROKICOL es una empresa colombiana fabricante de calzado bajo su marca comercial KROKI. Calidad, comodidad y capacidad productiva.">
 
 
-<meta property="og:image" content="https://krokicol.netlify.app/assets/images/hero-krokicol.webp">
+<meta property="og:image" content="https://krokicol.netlify.app/assets/images/hero-krokicol.png">
 <meta property="og:url" content="https://krokicol.netlify.app/">
 
 <meta name="twitter:card" content="summary_large_image">
@@ -26,7 +26,7 @@
 <meta name="twitter:description" content="KROKICOL es una empresa colombiana fabricante de calzado bajo su marca comercial KROKI. Calidad, comodidad y capacidad productiva.">
 
 
-<meta name="twitter:image" content="https://krokicol.netlify.app/assets/images/hero-krokicol.webp">
+<meta name="twitter:image" content="https://krokicol.netlify.app/assets/images/hero-krokicol.png">
 
  <meta name="theme-color" content="#102b31">
   <title>KROKICOL | Fabricantes de calzado colombiano KROKI</title>
@@ -60,10 +60,10 @@
 
 </head>
 <body>
-  <div class="announcement">FABRICACIÓN COLOMBIANA · CALIDAD Y EXPERIENCIA</div>
+  <div class="announcement">FABRICACIÓN COLOMBIANA · EXPERIENCIA Y CALIDAD</div>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="KROKICOL inicio">
-      <span class="brand-mark">K</span><span>KROKICOL</span>
+      <img class="brand-logo" src="assets/images/logo-k.png" alt="Logo KROKICOL"><span>KROKICOL</span>
     </a>
     <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="main-nav">
@@ -80,15 +80,20 @@
   <main>
     <section class="hero" id="inicio">
       <img
+  src="assets/images/kroki-peq.png"
+  alt="KROKI"
+  class="hero-kroki-mobile"
+>
+      <img
   class="hero-image"
-  src="assets/images/hero-krokicol.webp"
+  src="assets/images/hero-krokicol.png"
   alt="Productos y fabricación de calzado KROKICOL"
 >
       <div class="hero-overlay"></div>
       <div class="hero-content">
         <div class="renewal-badge">
   <span class="renewal-dot"></span>
-  ESTAMOS RENOVÁNDONOS
+  ESTAMOS ACTUALIZANDO
 </div>
         <p class="eyebrow light">HECHO EN COLOMBIA</p>
         <h1>Fabricamos comodidad.<br><em>Creamos confianza.</em></h1>
@@ -98,20 +103,54 @@
       <div class="hero-bottom"><span>01 — KROKICOL</span><span>DISEÑO · PRODUCCIÓN · CALIDAD</span></div>
     </section>
 
-    <section class="intro section-wrap" id="nosotros">
-      <div class="section-kicker">01 / NUESTRA ESENCIA</div>
-      <div class="intro-grid">
-        <h2>Somos una empresa colombiana que transforma experiencia en <span>comodidad.</span></h2>
-        <div class="intro-text">
-          <p>En KROKICOL trabajamos para crear calzado que acompaña diferentes momentos de la vida. Integramos conocimiento, procesos productivos y un equipo comprometido con cada detalle.</p>
-          
-        </div>
+    
+<section class="intro section-wrap" id="nosotros">
+  <div class="section-kicker">01 / NUESTRA ESENCIA</div>
+
+  <div class="intro-layout">
+
+    <!-- COLUMNA IZQUIERDA: TITULAR E IMAGEN -->
+    <div class="intro-left">
+
+      <h2>
+        Somos una empresa colombiana que transforma experiencia en
+        <span>comodidad.</span>
+      </h2>
+
+      <div class="intro-image">
+        <img
+          src="assets/images/expositor.png"
+          alt="Espacio de producción de KROKICOL"
+        >
+        <span class="image-label">KROKICOL / NUESTRA INDUSTRIA</span>
       </div>
-      <div class="intro-image image-placeholder">
-        <img src="assets/images/fabrica-01.svg" alt="Espacio de producción de KROKICOL">
-        <span class="image-label">NUESTRA INDUSTRIA · COLOMBIA</span>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: TEXTO Y VIDEO -->
+    <div class="intro-right">
+
+      <div class="intro-text">
+        <p>
+          En KROKICOL trabajamos para crear calzado que acompaña
+          diferentes momentos de la vida. Integramos conocimiento,
+          procesos productivos y un equipo comprometido con cada detalle.
+        </p>
       </div>
-    </section>
+
+      <div class="intro-video">
+        <video playsinline preload="metadata" loop autoplay muted>
+    <source src="assets/video/nosotros.mp4" type="video/mp4">
+    Tu navegador no admite la reproducción de video.
+</video>
+        <span class="image-label">KROKICOL / NUESTRA INDUSTRIA</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 
     <section class="process-section" id="procesos">
       <div class="section-wrap">
@@ -122,7 +161,9 @@
         </div>
         <div class="process-grid">
           <article class="process-card process-feature">
-            <img src="assets/images/proceso-inyeccion.svg" alt="Proceso de inyección">
+            <video class="process-video" autoplay muted loop playsinline preload="metadata">
+    <source src="assets/video/produccion-1.mp4" type="video/mp4">
+</video>
             <div><small>01</small><h3>Inyección</h3><p>Precisión desde el inicio del proceso.</p></div>
           </article>
           <article class="process-card">
@@ -137,6 +178,14 @@
             <img src="assets/images/proceso-calidad.svg" alt="Control de calidad">
             <div><small>04</small><h3>Calidad y empaque</h3><p>Revisión antes de llegar a su destino.</p></div>
           </article>
+          <article class="process-card">
+    <img src="assets/images/proceso-despacho.svg" alt="Despacho de calzado y carga de camiones">
+    <div>
+        <small>05</small>
+        <h3>Despacho</h3>
+        <p>Preparamos cada pedido para llegar a su destino.</p>
+    </div>
+</article>
         </div>
         <div class="process-footer"><span>CAPACIDAD PRODUCTIVA</span><a class="text-link light-link" href="#galeria">Explorar galería <span>↗</span></a></div>
       </div>
@@ -148,14 +197,57 @@
         <h2>Calzado para<br><span>cada momento.</span></h2>
         <p>Explora nuestras líneas y descubre la variedad de productos que desarrollamos.</p>
       </div>
-      <div class="category-grid">
-        <a class="category-card category-large" href="#contacto"><img src="assets/images/categoria-baby.svg" alt="Línea Baby"><span class="category-number">01</span><span class="category-name">Baby <b>↗</b></span></a>
-        <a class="category-card" href="#contacto"><img src="assets/images/categoria-nino.svg" alt="Línea Niño"><span class="category-number">02</span><span class="category-name">Niño <b>↗</b></span></a>
-        <a class="category-card" href="#contacto"><img src="assets/images/categoria-juvenil.svg" alt="Línea Juvenil"><span class="category-number">03</span><span class="category-name">Juvenil <b>↗</b></span></a>
-        <a class="category-card" href="#contacto"><img src="assets/images/categoria-dama.svg" alt="Línea Dama"><span class="category-number">04</span><span class="category-name">Dama <b>↗</b></span></a>
-        <a class="category-card" href="#contacto"><img src="assets/images/categoria-hombre.svg" alt="Línea Hombre"><span class="category-number">05</span><span class="category-name">Hombre <b>↗</b></span></a>
-      </div>
-      <p class="small-note">Las imágenes y categorías de esta primera versión son provisionales. Se reemplazarán por fotografías y referencias aprobadas por KROKICOL.</p>
+      
+<div class="category-grid">
+
+  <div class="category-card category-large">
+    <img class="category-carousel-image" id="baby-carousel-image"
+         src="assets/images/baby1.png" alt="Línea Baby">
+    <button class="carousel-arrow prev" type="button" aria-label="Imagen anterior">‹</button>
+    <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente">›</button>
+    <span class="category-number">01</span>
+    <span class="category-name">Baby <b>↗</b></span>
+  </div>
+
+  <div class="category-card">
+    <img class="category-carousel-image" id="nino-carousel-image"
+         src="assets/images/nin1.png" alt="Línea Niño">
+    <button class="carousel-arrow prev" type="button" aria-label="Imagen anterior">‹</button>
+    <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente">›</button>
+    <span class="category-number">02</span>
+    <span class="category-name">Niño <b>↗</b></span>
+  </div>
+
+  <div class="category-card">
+    <img class="category-carousel-image" id="juvenil-carousel-image"
+         src="assets/images/juv1.png" alt="Línea Juvenil">
+    <button class="carousel-arrow prev" type="button" aria-label="Imagen anterior">‹</button>
+    <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente">›</button>
+    <span class="category-number">03</span>
+    <span class="category-name">Juvenil <b>↗</b></span> 
+  </div>
+
+  <div class="category-card">
+    <img class="category-carousel-image" id="dama-carousel-image"
+         src="assets/images/dam1.png" alt="Línea Dama">
+    <button class="carousel-arrow prev" type="button" aria-label="Imagen anterior">‹</button>
+    <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente">›</button>
+    <span class="category-number">04</span>
+    <span class="category-name">Dama <b>↗</b></span>
+  </div>
+
+  <div class="category-card">
+    <img class="category-carousel-image" id="hombre-carousel-image"
+         src="assets/images/hom1.png" alt="Línea Hombre">
+    <button class="carousel-arrow prev" type="button" aria-label="Imagen anterior">‹</button>
+    <button class="carousel-arrow next" type="button" aria-label="Imagen siguiente">›</button>
+    <span class="category-number">05</span>
+    <span class="category-name">Hombre <b>↗</b></span>
+  </div>
+
+</div>
+
+
     </section>
 
     <section class="gallery-section" id="galeria">
@@ -169,6 +261,8 @@
           <figure class="gallery-tall"><img src="assets/images/galeria-01.svg" alt="Instalaciones KROKICOL"><figcaption>01 / Nuestra planta</figcaption></figure>
           <figure><img src="assets/images/galeria-02.svg" alt="Detalle de producción"><figcaption>02 / En producción</figcaption></figure>
           <figure><img src="assets/images/galeria-03.svg" alt="Detalle de calzado"><figcaption>03 / Cada detalle</figcaption></figure>
+        
+        
         </div>
       </div>
     </section>
@@ -195,7 +289,7 @@
     </div>
 
     
-<div class="distributors-list">
+<div class="distributors-list"> 
 
   <!-- BOGOTÁ -->
   <details class="city-accordion">
@@ -317,7 +411,7 @@
 </section>
 
 
-  <footer class="site-footer"><a class="brand brand-footer" href="#inicio"><span class="brand-mark">K</span><span>KROKICOL</span></a><span>HECHO EN COLOMBIA</span><span>© <span id="year"></span> KROKICOL. Todos los derechos reservados.</span></footer>
+  <footer class="site-footer"><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="assets/images/logo-k.png" alt="Logo KROKICOL"><span>KROKICOL</span></a><span>HECHO EN COLOMBIA</span><span>© <span id="year"></span> KROKICOL. Todos los derechos reservados.</span></footer>
   <script src="js/site.js"></script>
 </body>
 </html>
