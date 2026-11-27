@@ -14,6 +14,81 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 // Si todavía no existe hero.mp4, el poster SVG mantiene visible la portada.
 
+// =====================================
+// CARRUSEL PRINCIPAL KROKICOL
+// =====================================
+
+const hero = document.querySelector(".hero");
+const heroImage = document.getElementById("hero-carousel-image");
+const heroIndicators = document.querySelectorAll("#hero-indicators button");
+
+// Aquí agregamos las imágenes del carrusel
+const heroImages = [
+    "assets/images/hero-krokicol.png",
+    "assets/images/P-2.png",
+    "assets/images/P-3.png"
+];
+
+let heroIndex = 0;
+let heroTimer;
+
+// Cambiar imagen
+function changeHeroImage(index) {
+
+    heroIndex = index;
+
+    heroImage.classList.add("is-changing");
+
+    setTimeout(() => {
+
+        heroImage.src = heroImages[heroIndex];
+
+        hero.classList.toggle("hero-slide-alt", heroIndex !== 0);
+
+        heroIndicators.forEach((button, i) => {
+            button.classList.toggle("active", i === heroIndex);
+        });
+
+        heroImage.classList.remove("is-changing");
+
+    }, 350);
+}
+
+// Avanzar automáticamente
+function startHeroCarousel() {
+
+    clearInterval(heroTimer);
+
+    heroTimer = setInterval(() => {
+
+        const nextIndex = (heroIndex + 1) % heroImages.length;
+
+        changeHeroImage(nextIndex);
+
+    }, 6000);
+}
+
+// Cambiar al seleccionar un indicador
+heroIndicators.forEach((button, index) => {
+
+    button.addEventListener("click", () => {
+
+        changeHeroImage(index);
+        startHeroCarousel();
+
+    });
+
+});
+
+// Precargar imágenes
+heroImages.forEach(src => {
+    const image = new Image();
+    image.src = src;
+});
+
+// Iniciar carrusel
+startHeroCarousel();
+
 // Imágenes disponibles para cada categoría
 const categoryCarousels = {
     "baby-carousel-image": [

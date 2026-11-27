@@ -1531,25 +1531,72 @@
   }
 }
 
+/* =================================
+   CARRUSEL PRINCIPAL KROKICOL
+================================= */
 
-/* =========================================
-   PUBLICACIÓN INICIAL - KROKICOL
-   Mostrar únicamente Inicio y Nosotros
-========================================= */
-
-/* Ocultar las secciones que todavía no se publicarán */
-#procesos,
-#productos,
-#galeria,
-#distribuidores,
-.social-section {
-    display: none !important;
+.hero-image {
+    opacity: 1;
+    transition: opacity 0.7s ease;
 }
 
-/* Ocultar enlaces de secciones pendientes */
-.main-nav a[href="#procesos"],
-.main-nav a[href="#productos"],
-.main-nav a[href="#galeria"],
-.main-nav a[href="#distribuidores"] {
+/* Transición al cambiar de imagen */
+.hero-image.is-changing {
+    opacity: 0;
+}
+
+/* Segunda diapositiva */
+.hero.hero-slide-alt .hero-image {
+    display: block;
+    opacity: 1;
+}
+
+
+
+/* Indicadores del carrusel */
+.hero-indicators {
+    position: absolute;
+    bottom: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 5;
+}
+
+.hero-indicators button {
+    width: 9px;
+    height: 9px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255,255,255,.5);
+    cursor: pointer;
+    padding: 0;
+}
+
+.hero-indicators button.active {
+    background: white;
+    transform: scale(1.3);
+}
+
+/* En celulares */
+@media (max-width: 640px) {
+
+    .hero.hero-slide-alt .hero-image {
+        display: block;
+    }
+
+    .hero-indicators {
+        bottom: 25px;
+    }
+}
+
+/* VISTA TEMPORAL: mostrar solo Inicio, Nuestra esencia y Productos */
+
+#procesos,
+#galeria,
+#distribuidores,
+.social-section,
+.site-footer {
     display: none !important;
 }
